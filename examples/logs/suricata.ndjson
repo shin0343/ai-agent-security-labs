@@ -1,0 +1,1 @@
+{"alert": {"severity": 2, "signature": "SYNTHETIC suspicious outbound upload"}, "dest_ip": "203.0.113.77", "event_type": "alert", "flow_id": 711, "src_ip": "192.0.2.80", "timestamp": "2026-09-02T09:02:20Z"}

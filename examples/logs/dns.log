@@ -1,0 +1,2 @@
+{"answers": ["203.0.113.77"], "id.orig_h": "192.0.2.80", "query": "sync.demo.invalid", "ts": 1788339738.0, "uid": "C-DNS-1"}
+{"answers": ["203.0.113.27"], "id.orig_h": "192.0.2.120", "query": "docs.demo.invalid", "ts": 1788339838.0, "uid": "C-DNS-2"}

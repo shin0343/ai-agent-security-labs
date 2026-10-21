@@ -1,0 +1,4 @@
+{"action": "run_build", "agent": "build", "resource": "internal-ci", "timestamp": "2026-09-02T09:00:20Z"}
+{"action": "publish_external", "agent": "data", "approved": false, "resource": "monthly-report", "timestamp": "2026-09-02T09:02:18Z"}
+{"action": "winrm_login", "agent": "helpdesk", "approved_scope": ["192.0.2.20"], "resource": "192.0.2.44", "timestamp": "2026-09-02T09:04:00Z"}
+{"action": "read_document", "agent": "docs", "resource": "intranet", "timestamp": "2026-09-02T09:04:40Z"}

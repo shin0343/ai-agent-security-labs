@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentguard-portfolio"
+version = "2.0.0"
+description = "Local evidence-driven AI agent security workbench"
+requires-python = ">=3.11"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["agent-security", "tool-authorization", "threat-hunting", "hmac", "evidence", "soc"]
+dependencies = [
+  "fastapi==0.138.2",
+  "uvicorn==0.49.0",
+  "pydantic==2.13.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx==0.28.1",
+  "pytest==9.1.1",
+  "pytest-asyncio==1.4.0",
+  "ruff==0.15.20",
+  "mypy==2.1.0",
+]
+
+[project.scripts]
+agentguard-workbench = "agentguard.workbench.api:main"
+
+[tool.setuptools.packages.find]
+include = ["agentguard*"]
+
+[tool.setuptools.package-data]
+"agentguard.workbench" = ["migrations/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+markers = [
+  "legacy: preserved AgentGuard regression tests",
+  "security: security boundary checks",
+  "integration: multi-component checks",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+# S608: every dynamic SQL fragment is a fixed first-party clause; all values are
+# bound parameters. The allowlisted placeholder construction is reviewed in tests.
+ignore = ["S101", "B008", "S608"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106", "S108"]
+"agentguard/workbench/api.py" = ["S104"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+check_untyped_defs = true

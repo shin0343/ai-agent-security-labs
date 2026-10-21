@@ -1,0 +1,39 @@
+# Runtime state, keys, databases and generated reports
+run/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.audit-key
+*.key
+
+# Local tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets / environment
+.env
+.env.*
+!.env.example
+
+# Playwright output
+frontend/.e2e-run/
+frontend/.e2e-debug/
+test-results/
+playwright-report/

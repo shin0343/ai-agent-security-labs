@@ -1,0 +1,2 @@
+{"@timestamp": "2026-09-02T09:00:25Z", "Computer": "CI-01", "EventData": {"CommandLine": "synthetic-builder --run", "SubjectUserName": "build_svc"}, "EventID": 4688}
+{"@timestamp": "2026-09-02T09:04:01Z", "Computer": "HOST-UNAPPROVED", "EventData": {"IpAddress": "192.0.2.10", "SubjectUserName": "helpdesk_svc", "TargetHost": "192.0.2.44"}, "EventID": 4625}
